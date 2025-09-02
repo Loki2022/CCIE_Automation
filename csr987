@@ -1,0 +1,9 @@
+int gi1
+ip ospf 1 area  0
+ip ospf network point-to-point
+int lo0
+ip ospf 1 area  0
+ip ospf network point-to-point
+int gi2
+ip ospf 1 area  0
+ip ospf network point-to-point
