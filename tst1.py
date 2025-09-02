@@ -7,7 +7,7 @@ with open('device_list') as f:
     devices = (f.read().splitlines())
 
 for device in devices:
-    print('connecting to ' + device) 
+    print('connecting to device ' + device) 
     ip_add = device
     
 ios_device = {'device_type':'cisco_ios','ip': ip_add , 'username': 'admin','password': 'cisco'}
