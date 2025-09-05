@@ -1,0 +1,57 @@
+from netmiko import ConnectHandler
+from getpass import getpass
+
+vios1 = {'ip':'192.168.1.61', 'username':'admin','password': 'cisco', 'device_type':'cisco_ios'}
+vios2 = {'ip':'192.168.1.62', 'username':'admin','password': 'cisco', 'device_type':'cisco_ios'}
+vios3 = {'ip':'192.168.1.63', 'username':'admin','password': 'cisco', 'device_type':'cisco_ios'}
+vios4 = {'ip':'192.168.1.64', 'username':'admin','password': 'cisco', 'device_type':'cisco_ios'}
+
+lst1 = [vios1]
+
+with open('vios1') as f:
+    send = (f.read().splitlines())
+for i in lst1:
+    print('connecting to ')
+    connect = ConnectHandler(**i)
+    out = connect.send_config_set(send)
+    print(out)
+
+lst2 = [vios2]
+
+with open('vios2') as f:
+    send = (f.read().splitlines())
+
+for i in lst2:
+    print('connecting to '+str(i))
+    connect = ConnectHandler(**i)
+    out = connect.send_config_set(send)
+    print(out)
+
+lst3 = [vios3]
+
+with open('vios3') as f:
+    send = (f.read().splitlines())
+
+for i in lst3:
+    print('connecting to '+str(i))
+    connect = ConnectHandler(**i)
+    out = connect.send_config_set(send)
+    print(out)
+
+lst4 = [vios4]
+
+with open('vios4') as f:
+    send = (f.read().splitlines())
+
+for i in lst4:
+    print('connecting to '+str(i))
+    connect = ConnectHandler(**i)
+    out = connect.send_config_set(send)
+    print(out)
+
+lst = [vios1,vios2,vios3,vios4]
+
+for i in lst:
+    connect = ConnectHandler(**i)
+    output = connect.send_command('sh ip ospf neigh')
+    print(output)
