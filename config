@@ -1,2 +1,2 @@
 router ospf 1
-#prefix-suppression
+#prefix-suppressioncd
