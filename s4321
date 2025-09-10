@@ -1,8 +1,0 @@
-vtp domain CCIE
-vtp password cisco
-
-int range g0/0-1
-switchport trunk encap dot1
-switchport mode trunk
-
-vlan 2-10
