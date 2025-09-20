@@ -1,0 +1,14 @@
+ip name-server 8.8.8.8
+ip domain lookup
+ntp server 1.1.1.1
+
+int lo0
+ip add 2.2.2.2 255.255.255.0
+ip ospf 1 area 0
+ip ospf network point-to-point
+
+int g0/0
+ip add  10.1.12.2 255.255.255.0
+no sh   
+ip ospf 1 area 0
+ip ospf network point-to-point
