@@ -1,0 +1,9 @@
+vtp domain CCIE
+vtp password cisco
+!
+int range gi0/0-2
+switchport trunk encap dot1q
+switchport mode trunk
+switchport nonegotiate
+channel-group 12 mode active
+!
