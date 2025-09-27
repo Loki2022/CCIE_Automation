@@ -1,0 +1,7 @@
+vtp domain CCIE
+vtp password cisco
+!
+int g0/0
+switchport trunk encap dot1
+switchport mode trunk
+switchport nonegotiate
