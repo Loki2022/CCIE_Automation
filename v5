@@ -1,0 +1,9 @@
+int lo0
+ip add 5.5.5.5 255.255.255.255
+ip ospf 1 area 0
+!
+int g0/0
+no shut
+ip add 10.1.56.5 255.255.255.0
+ip ospf 1 area 0
+ip ospf network point-to-point
