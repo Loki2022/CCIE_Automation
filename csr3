@@ -1,8 +1,0 @@
-int g1
-ip add 10.1.34.3 255.255.255.0
-ip ospf 1 area 0
-ip ospf network point-to-point
-int lo0
-ip add 3.3.3.3 255.255.255.255
-ip ospf 1 area 0
-ip ospf network point-to-point
