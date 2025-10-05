@@ -1,7 +1,8 @@
 vtp domain CCIE
 vtp password cisco
 !
-interface gi0/2
+vlan 2-10
+interface gi0/1
 switchport mode access  
 switchport access vlan 10  
 switchport port-security
@@ -9,10 +10,7 @@ switchport port-security maximum 2
 switchport port-security violation restrict
 switchport port-security mac-address sticky
 !
-int range gi0/0-1
+int range gi0/0
 switchport trunk encap dot1q
 switchport mode trunk
 switchport nonegotiate
-channel-group 12 mode active
-!
-vlan 2-10
