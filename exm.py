@@ -8,7 +8,7 @@ sw ={'ip':input('enter ip: '), 'username': username, 'password': password, 'devi
 
 connect = ConnectHandler(**sw)
 for i in range(1,11):
-    print('connecting to '+ str('ip'))
+    print('connecting to '+ str(sw['ip']))
     cmd = ['vlan '+ str(i)]
     out = connect.send_config_set(cmd)
     print(out)
